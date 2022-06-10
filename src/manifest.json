@@ -1,0 +1,51 @@
+{
+	"manifest_version": 3,
+	"name": "Paths",
+	"version": "0.0.1",
+	"offline_enabled": true,
+	"author": "Raphael S.",
+	"description": "Find shortcuts for popular apps and websites",
+	"action": {
+		"icons": {
+			"16": "assets/paths-16.png",
+			"48": "assets/paths-48.png",
+			"128": "assets/paths-128.png"
+		},
+		"default_title": "Open Paths"
+	},
+	"icons": {
+		"16": "assets/paths-16.png",
+		"48": "assets/paths-48.png",
+		"128": "assets/paths-128.png"
+	},
+	"background": {
+		"service_worker": "background.js"
+	},
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"run_at": "document_end",
+			"js": ["libs/jquery.js", "libs/jquery-ui.js", "content.js"],
+			"css": ["content.css"]
+		}
+	],
+	"web_accessible_resources": [
+		{
+			"resources": ["assets/*", "content.html"],
+			"matches": ["<all_urls>"]
+		}
+	],
+	"commands": {
+		"open-unite-extension": {
+			"suggested_key": {
+				"windows": "Ctrl+Shift+U",
+				"mac": "Command+Shift+U",
+				"chromeos": "Ctrl+Shift+U",
+				"linux": "Ctrl+Shift+U"
+			},
+			"description": "Open Unite"
+		}
+	},
+	"permissions": ["tabs", "activeTab", "browsingData", "scripting", "search"],
+	"host_permissions": ["https://www.googleapis.com/*", "https://gstatic.com/*", "*://*/*"]
+}
