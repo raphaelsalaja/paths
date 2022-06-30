@@ -1,0 +1,341 @@
+@media (prefers-color-scheme: light) {
+	:root {
+		--color-background: var(--color-light-background);
+		--color-border: var(--color-light-border);
+		--color-hover: var(--color-light-hover);
+		--color-tab: var(--color-light-tab);
+		--color-tab-text: var(--color-light-tab-text);
+		--color-action: var(--color-light-action);
+		--color-action-text: var(--color-light-action-text);
+		--color-bookmark: var(--color-light-bookmark);
+		--color-bookmark-text: var(--color-light-bookmark-text);
+		--color-support: var(--color-light-support);
+		--color-support-text: var(--color-light-support-text);
+		--color-quicklink: var(--color-light-quicklink);
+		--color-quicklink-text: var(--color-light-quicklink-text);
+		--color-tool: var(--color-light-tool);
+		--color-tool-text: var(--color-light-tool-text);
+		--color-key: var(--color-light-key);
+		--color-key-text: var(--color-light-key-text);
+		--color-text: var(--color-light-text);
+		--color-text-hover: var(--color-light-text-hover);
+		--color-search-placeholder: var(--color-light-search-placeholder);
+		--color-placeholder: var(--color-light-placeholder);
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-background: var(--color-dark-background);
+		--color-border: var(--color-dark-border);
+		--color-hover: var(--color-dark-hover);
+		--color-tab: var(--color-dark-tab);
+		--color-tab-text: var(--color-dark-tab-text);
+		--color-action: var(--color-dark-action);
+		--color-action-text: var(--color-dark-action-text);
+		--color-bookmark: var(--color-dark-bookmark);
+		--color-bookmark-text: var(--color-dark-bookmark-text);
+		--color-support: var(--color-dark-support);
+		--color-support-text: var(--color-dark-support-text);
+		--color-quicklink: var(--color-dark-quicklink);
+		--color-quicklink-text: var(--color-dark-quicklink-text);
+		--color-tool: var(--color-dark-tool);
+		--color-tool-text: var(--color-dark-tool-text);
+		--color-key: var(--color-dark-key);
+		--color-key-text: var(--color-dark-key-text);
+		--color-text: var(--color-dark-text);
+		--color-text-hover: var(--color-dark-text-hover);
+		--color-search-placeholder: var(--color-dark-search-placeholder);
+		--color-placeholder: var(--color-dark-placeholder);
+	}
+}
+
+:root {
+	--overlay-color: rgba(0, 0, 0, 0.75);
+	--transparent: rgba(0, 0, 0, 0);
+
+	--z-index-front: 2147483647;
+	--z-index-middle: 1073741823;
+	--z-index-back: -2147483648;
+
+	--color-light-background: #191919;
+	--color-light-border: #2b2b2b;
+	--color-light-hover: #292929;
+	--color-light-tab: #001c0d;
+	--color-light-tab-text: #1e9850;
+	--color-light-action: #72000c;
+	--color-light-action-text: #ee1e34;
+	--color-light-bookmark: #004865;
+	--color-light-bookmark-text: #11b3f3;
+	--color-light-support: #480065;
+	--color-light-support-text: #9c11f3;
+	--color-dark-quicklink: #5b6500;
+	--color-dark-quicklink-text: #d9f311;
+	--color-dark-tool: #646464;
+	--color-dark-tool-text: #efefef;
+	--color-light-key: #4b4b4b;
+	--color-light-key-text: #e2e2e2;
+	--color-light-text: #cdcdcd;
+	--color-light-text-hover: #ffffff;
+	--color-light-search-placeholder: #5f5f5f;
+	--color-light-placeholder: #292929;
+
+	--color-dark-background: #191919;
+	--color-dark-border: #2b2b2b;
+	--color-dark-hover: #292929;
+	--color-dark-tab: #001c0d;
+	--color-dark-tab-text: #1e9850;
+	--color-dark-action: #72000c;
+	--color-dark-action-text: #ee1e34;
+	--color-dark-bookmark: #004865;
+	--color-dark-bookmark-text: #11b3f3;
+	--color-dark-support: #480065;
+	--color-dark-support-text: #9c11f3;
+	--color-dark-quicklink: #5b6500;
+	--color-dark-quicklink-text: #d9f311;
+	--color-dark-tool: #646464;
+	--color-dark-tool-text: #efefef;
+	--color-dark-key: #4b4b4b;
+	--color-dark-key-text: #e2e2e2;
+	--color-dark-text: #cdcdcd;
+	--color-dark-text-hover: #ffffff;
+	--color-dark-search-placeholder: #5f5f5f;
+	--color-dark-placeholder: #292929;
+}
+
+/*---------------------------------------------------------------------------*
+ * SF UI Display
+ *---------------------------------------------------------------------------*/
+@font-face {
+	font-family: 'SF Pro Display ';
+	font-style: normal;
+	font-weight: 100;
+	src: url('chrome-extension://__MSG_@@extension_id__/assets/fonts/SFProDisplay-Ultralight.ttf');
+}
+@font-face {
+	font-family: 'SF Pro Display';
+	font-style: normal;
+	font-weight: 200;
+	src: url('chrome-extension://__MSG_@@extension_id__/assets/fonts/SFProDisplay-Thin.ttf');
+}
+@font-face {
+	font-family: 'SF Pro Display';
+	font-style: normal;
+	font-weight: 300;
+	src: url('chrome-extension://__MSG_@@extension_id__/assets/fonts/SFProDisplay-Light.ttf');
+}
+@font-face {
+	font-family: 'SF Pro Display';
+	font-style: normal;
+	font-weight: 400;
+	src: url('chrome-extension://__MSG_@@extension_id__/assets/fonts/SFProDisplay-Regular.ttf');
+}
+@font-face {
+	font-family: 'SF Pro Display';
+	font-style: normal;
+	font-weight: 500;
+	src: url('chrome-extension://__MSG_@@extension_id__/assets/fonts/SFProDisplay-Medium.ttf');
+}
+@font-face {
+	font-family: 'SF Pro Display Se';
+	font-style: normal;
+	font-weight: 600;
+	src: url('chrome-extension://__MSG_@@extension_id__/assets/fonts/SFProDisplay-SemiBold.ttf');
+}
+@font-face {
+	font-family: 'SF Pro Display';
+	font-style: normal;
+	font-weight: 700;
+	src: url('chrome-extension://__MSG_@@extension_id__/assets/fonts/SFProDisplay-Bold.ttf');
+}
+@font-face {
+	font-family: 'SF Pro Display';
+	font-style: normal;
+	font-weight: 800;
+	src: url('chrome-extension://__MSG_@@extension_id__/assets/fonts/SFProDisplay-Black.ttf');
+}
+@font-face {
+	font-family: 'SF Pro Display';
+	font-style: normal;
+	font-weight: 900;
+	src: url('chrome-extension://__MSG_@@extension_id__/assets/fonts/SFProDisplay-Heavy.ttf');
+}
+
+.paths-extension * {
+	display: block;
+	width: unset;
+	box-shadow: unset;
+	padding: unset;
+	margin: unset;
+	font-family: unset;
+	background-color: unset;
+	border-radius: unset;
+}
+
+.paths-extension {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+}
+
+.paths-extension ::-webkit-scrollbar {
+	width: 8px;
+}
+
+.paths-extension ::-webkit-scrollbar-track {
+	background-color: var(--transparent);
+	padding: 4px;
+}
+
+.paths-extension ::-webkit-scrollbar-thumb {
+	background-color: var(--color-border);
+	border-radius: '8px';
+}
+
+.paths-extension ::-webkit-scrollbar-thumb:hover {
+	background-color: var(--color-hover);
+	border-radius: '4px';
+}
+
+.paths-extension ::-webkit-input-placeholder {
+	font-family: 'SF Pro Display';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 14px;
+
+	/* Dark/Colors/Text - Secondary */
+	color: rgba(255, 255, 255, 0.786);
+}
+
+.paths-extension input {
+	width: 100%;
+	height: 100%;
+	border: 0px;
+	outline: 0px;
+}
+
+.paths-extension input:focus {
+	outline: none;
+	border: none;
+}
+
+.paths-extension #paths-overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: var(--overlay-color);
+	z-index: var(--z-index-back);
+}
+
+.paths-extension #paths-container {
+	/* Start Menu */
+
+	box-sizing: border-box;
+
+	/* Auto layout */
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 0px;
+
+	position: absolute;
+	width: 912px;
+	height: 724px;
+	left: calc(50% - 912px / 2);
+	top: calc(50% - 724px / 2);
+
+	background: linear-gradient(0deg, rgba(32, 32, 32, 0.5), rgba(32, 32, 32, 0.5)), rgba(32, 32, 32, 0.96);
+	background-blend-mode: normal, color, luminosity;
+
+	border: 1px solid rgba(117, 117, 117, 0.4);
+
+	box-shadow: 0px 32px 64px rgba(0, 0, 0, 0.37), 0px 2px 21px rgba(0, 0, 0, 0.37);
+	border-radius: 8px;
+}
+
+.paths-extension #paths {
+	/* Main */
+
+	/* Auto layout */
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 32px;
+	gap: 32px;
+
+	width: 912px;
+	height: 724px;
+
+	/* Note: backdrop-filter has minimal browser support */
+
+	border-radius: 8px;
+
+	/* Inside auto layout */
+
+	flex: none;
+	order: 0;
+	align-self: stretch;
+	flex-grow: 0;
+}
+
+.paths-extension #paths-search {
+	/* Search Bar */
+
+	box-sizing: border-box;
+
+	/* Auto layout */
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 8px;
+
+	width: 848px;
+	height: 32px;
+
+	/* Dark/Control/Fill */
+
+	background: rgba(255, 255, 255, 0.0605);
+	border-radius: 8px;
+
+	/* Inside auto layout */
+
+	flex: none;
+	order: 0;
+	align-self: stretch;
+	flex-grow: 0;
+}
+
+.paths-extension #paths-search-box {
+	/* Box */
+
+	/* Auto layout */
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0px;
+	gap: 10px;
+
+	width: 184px;
+	height: 16px;
+
+	/* Inside auto layout */
+
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+}
+
+.paths-hidden {
+	display: none;
+}

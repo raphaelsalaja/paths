@@ -1,7 +1,7 @@
-import {youtube} from './youtube.js'
-import {notion} from './notion.js'
+import {notion} from './sources/notion.js'
+import {youtube} from './sources/youtube.js'
 
 export const data = {
-	youtube,
 	notion,
+	youtube,
 }

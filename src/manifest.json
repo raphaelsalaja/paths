@@ -5,11 +5,15 @@
 	"offline_enabled": true,
 	"author": "Raphael S.",
 	"description": "Find shortcuts for popular apps and websites",
-	"icons": {},
 	"background": {
 		"service_worker": "background.js",
 		"type": "module"
 	},
+	"action": {
+		"icons": {},
+		"default_title": "Open Paths"
+	},
+	"icons": {},
 	"content_scripts": [
 		{
 			"matches": ["<all_urls>"],
@@ -20,10 +24,10 @@
 	],
 	"web_accessible_resources": [
 		{
-			"resources": ["assets/*", "content.html"],
+			"resources": ["assets/*", "data/*", "content.html"],
 			"matches": ["<all_urls>"]
 		}
 	],
 	"permissions": ["tabs", "activeTab", "browsingData", "scripting", "search", "alarms"],
-	"host_permissions": ["https://api.quotable.io/random"]
+	"host_permissions": ["https://www.googleapis.com/*", "https://gstatic.com/*", "https://api.quotable.io/random", "*://*/*"]
 }
