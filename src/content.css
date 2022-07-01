@@ -23,7 +23,6 @@
 		--color-placeholder: var(--color-light-placeholder);
 	}
 }
-
 @media (prefers-color-scheme: dark) {
 	:root {
 		--color-background: var(--color-dark-background);
@@ -49,7 +48,6 @@
 		--color-placeholder: var(--color-dark-placeholder);
 	}
 }
-
 :root {
 	--overlay-color: rgba(0, 0, 0, 0.75);
 	--transparent: rgba(0, 0, 0, 0);
@@ -103,59 +101,56 @@
 	--color-dark-placeholder: #292929;
 }
 
-/*---------------------------------------------------------------------------*
- * SF UI Display
- *---------------------------------------------------------------------------*/
 @font-face {
-	font-family: 'SF Pro Display ';
+	font-family: 'SF Pro Display Ultralight';
 	font-style: normal;
 	font-weight: 100;
 	src: url('chrome-extension://__MSG_@@extension_id__/assets/fonts/SFProDisplay-Ultralight.ttf');
 }
 @font-face {
-	font-family: 'SF Pro Display';
+	font-family: 'SF Pro Display Thin';
 	font-style: normal;
 	font-weight: 200;
 	src: url('chrome-extension://__MSG_@@extension_id__/assets/fonts/SFProDisplay-Thin.ttf');
 }
 @font-face {
-	font-family: 'SF Pro Display';
+	font-family: 'SF Pro Display Light';
 	font-style: normal;
 	font-weight: 300;
 	src: url('chrome-extension://__MSG_@@extension_id__/assets/fonts/SFProDisplay-Light.ttf');
 }
 @font-face {
-	font-family: 'SF Pro Display';
+	font-family: 'SF Pro Display Regular';
 	font-style: normal;
 	font-weight: 400;
 	src: url('chrome-extension://__MSG_@@extension_id__/assets/fonts/SFProDisplay-Regular.ttf');
 }
 @font-face {
-	font-family: 'SF Pro Display';
+	font-family: 'SF Pro Display Medium';
 	font-style: normal;
 	font-weight: 500;
 	src: url('chrome-extension://__MSG_@@extension_id__/assets/fonts/SFProDisplay-Medium.ttf');
 }
 @font-face {
-	font-family: 'SF Pro Display Se';
+	font-family: 'SF Pro Display Semibold';
 	font-style: normal;
 	font-weight: 600;
 	src: url('chrome-extension://__MSG_@@extension_id__/assets/fonts/SFProDisplay-SemiBold.ttf');
 }
 @font-face {
-	font-family: 'SF Pro Display';
+	font-family: 'SF Pro Display Bold';
 	font-style: normal;
 	font-weight: 700;
 	src: url('chrome-extension://__MSG_@@extension_id__/assets/fonts/SFProDisplay-Bold.ttf');
 }
 @font-face {
-	font-family: 'SF Pro Display';
+	font-family: 'SF Pro Display Black';
 	font-style: normal;
 	font-weight: 800;
 	src: url('chrome-extension://__MSG_@@extension_id__/assets/fonts/SFProDisplay-Black.ttf');
 }
 @font-face {
-	font-family: 'SF Pro Display';
+	font-family: 'SF Pro Display Heavy';
 	font-style: normal;
 	font-weight: 900;
 	src: url('chrome-extension://__MSG_@@extension_id__/assets/fonts/SFProDisplay-Heavy.ttf');
@@ -171,7 +166,6 @@
 	background-color: unset;
 	border-radius: unset;
 }
-
 .paths-extension {
 	position: fixed;
 	top: 0;
@@ -180,49 +174,40 @@
 	height: 100%;
 	z-index: 9999;
 }
-
 .paths-extension ::-webkit-scrollbar {
 	width: 8px;
 }
-
 .paths-extension ::-webkit-scrollbar-track {
 	background-color: var(--transparent);
 	padding: 4px;
 }
-
 .paths-extension ::-webkit-scrollbar-thumb {
 	background-color: var(--color-border);
 	border-radius: '8px';
 }
-
 .paths-extension ::-webkit-scrollbar-thumb:hover {
 	background-color: var(--color-hover);
 	border-radius: '4px';
 }
-
 .paths-extension ::-webkit-input-placeholder {
-	font-family: 'SF Pro Display';
-	font-style: normal;
-	font-weight: 600;
+	font-family: 'SF Pro Display Semibold';
+
 	font-size: 12px;
 	line-height: 14px;
 
 	/* Dark/Colors/Text - Secondary */
 	color: rgba(255, 255, 255, 0.786);
 }
-
 .paths-extension input {
 	width: 100%;
 	height: 100%;
 	border: 0px;
 	outline: 0px;
 }
-
 .paths-extension input:focus {
 	outline: none;
 	border: none;
 }
-
 .paths-extension #paths-overlay {
 	position: absolute;
 	width: 100%;
@@ -232,7 +217,6 @@
 	background: var(--overlay-color);
 	z-index: var(--z-index-back);
 }
-
 .paths-extension #paths-container {
 	/* Start Menu */
 
@@ -246,12 +230,12 @@
 	padding: 0px;
 
 	position: absolute;
-	width: 912px;
+	width: 1000px;
 	height: 724px;
 	left: calc(50% - 912px / 2);
 	top: calc(50% - 724px / 2);
 
-	background: linear-gradient(0deg, rgba(32, 32, 32, 0.5), rgba(32, 32, 32, 0.5)), rgba(32, 32, 32, 0.96);
+	background: linear-gradient(0deg, rgba(32, 32, 32, 1), rgba(32, 32, 32, 1)), rgba(32, 32, 32, 1);
 	background-blend-mode: normal, color, luminosity;
 
 	border: 1px solid rgba(117, 117, 117, 0.4);
@@ -259,7 +243,6 @@
 	box-shadow: 0px 32px 64px rgba(0, 0, 0, 0.37), 0px 2px 21px rgba(0, 0, 0, 0.37);
 	border-radius: 8px;
 }
-
 .paths-extension #paths {
 	/* Main */
 
@@ -269,10 +252,10 @@
 	flex-direction: column;
 	align-items: center;
 	padding: 32px;
-	gap: 32px;
+	gap: 24px;
 
-	width: 912px;
-	height: 724px;
+	width: auto;
+	height: 100%;
 
 	/* Note: backdrop-filter has minimal browser support */
 
@@ -285,7 +268,6 @@
 	align-self: stretch;
 	flex-grow: 0;
 }
-
 .paths-extension #paths-search {
 	/* Search Bar */
 
@@ -299,12 +281,12 @@
 	align-items: flex-start;
 	padding: 8px;
 
-	width: 848px;
-	height: 32px;
+	width: auto;
 
 	/* Dark/Control/Fill */
 
 	background: rgba(255, 255, 255, 0.0605);
+	border: 1px solid rgba(255, 255, 255, 0.093);
 	border-radius: 8px;
 
 	/* Inside auto layout */
@@ -314,7 +296,6 @@
 	align-self: stretch;
 	flex-grow: 0;
 }
-
 .paths-extension #paths-search-box {
 	/* Box */
 
@@ -324,7 +305,7 @@
 	flex-direction: row;
 	align-items: center;
 	padding: 0px;
-	gap: 10px;
+	gap: 16px;
 
 	width: 184px;
 	height: 16px;
@@ -335,7 +316,391 @@
 	order: 0;
 	flex-grow: 0;
 }
+.paths-extension #paths-shortcuts-section {
+	/* Suggestions */
 
-.paths-hidden {
-	display: none;
+	/* Auto layout */
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 0px;
+	gap: 12px;
+
+	width: auto;
+
+	/* Inside auto layout */
+
+	flex: none;
+	order: 4;
+	align-self: stretch;
+	flex-grow: 0;
+}
+.paths-extension #paths-shortcuts-section-title {
+	/* Title */
+
+	/* Auto layout */
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 0px;
+
+	/* Inside auto layout */
+
+	flex: none;
+	order: 0;
+	align-self: stretch;
+	flex-grow: 0;
+}
+.paths-extension #paths-shortcuts-section-title-container {
+	/* Container */
+
+	/* Auto layout */
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0px;
+	gap: 16px;
+
+	width: auto;
+	height: 19px;
+
+	/* Inside auto layout */
+
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+}
+.paths-extension #paths-shortcuts-section-title-icon {
+	/* Icon */
+
+	/* Auto layout */
+
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	padding: 0px;
+	gap: 16px;
+
+	width: 16px;
+	height: 16px;
+
+	/* Inside auto layout */
+
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+}
+.paths-extension #paths-shortcuts-section-title-text {
+	/* Visual Studio Code */
+
+	font-family: 'SF Pro Display Bold';
+	font-size: 16px;
+	/* identical to box height */
+
+	/* Dark/Colors/Text - Primary */
+
+	color: #ffffff;
+
+	/* Inside auto layout */
+
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+}
+.paths-extension #paths-shortcuts-section-results-group {
+	/* Results Group */
+
+	/* Auto layout */
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 0px;
+	gap: 16px;
+
+	width: -webkit-fill-available;
+
+	/* Inside auto layout */
+
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+}
+.paths-extension #paths-shortcuts-section-results-group-heading {
+	/* Heading */
+
+	box-sizing: border-box;
+
+	/* Auto layout */
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 8px 0px;
+	gap: 8px;
+
+	/* Dark/Colors/Divider Stroke */
+	width: auto;
+
+	border-bottom: 1px solid rgba(255, 255, 255, 0.0837);
+
+	/* Inside auto layout */
+
+	flex: none;
+	order: 0;
+	align-self: stretch;
+	flex-grow: 0;
+}
+.paths-extension #paths-shortcuts-section-results-group-heading-container {
+	/* Container */
+
+	/* Auto layout */
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0px;
+
+	width: 100%;
+
+	/* Inside auto layout */
+
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+}
+.paths-extension #paths-shortcuts-section-results-group-heading-container span {
+	/* General */
+
+	width: auto;
+	height: auto;
+
+	font-family: 'SF Pro Display Regular';
+	font-size: 14px;
+	line-height: 17px;
+	/* identical to box height */
+
+	/* Dark/Colors/Text - Secondary */
+
+	color: rgba(255, 255, 255, 0.786);
+
+	/* Inside auto layout */
+
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+}
+.paths-extension #paths-shortcuts-section-results-group-columns-container {
+	/* Results Columns */
+
+	/* Auto layout */
+
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: space-between;
+	padding: 0px;
+	gap: 32px;
+
+	/* Inside auto layout */
+	width: 100%;
+
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+}
+.paths-extension #paths-shortcuts-section-results-group-column-1 {
+	/* 1 */
+
+	/* Auto layout */
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 0px;
+	gap: 16px;
+
+	/* Inside auto layout */
+
+	flex: none;
+	order: 0;
+	flex-grow: 1;
+}
+.paths-extension #paths-shortcuts-section-results-group-column-2 {
+	/* 1 */
+
+	/* Auto layout */
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 0px;
+	gap: 16px;
+
+	/* Inside auto layout */
+
+	flex: none;
+	order: 0;
+	flex-grow: 1;
+}
+.paths-extension #paths-shortcuts-section-results-group-column-3 {
+	/* 1 */
+
+	/* Auto layout */
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 0px;
+	gap: 16px;
+
+	/* Inside auto layout */
+
+	flex: none;
+	order: 0;
+	flex-grow: 1;
+}
+.paths-extension #paths-shortcut {
+	/* Result */
+
+	/* Auto layout */
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0px;
+	gap: 16px;
+
+	/* Inside auto layout */
+
+	width: 100%;
+	height: 32px;
+
+	flex: none;
+	order: 0;
+	align-self: stretch;
+	flex-grow: 0;
+}
+.paths-extension #paths-result-left {
+	/* Action */
+
+	/* Auto layout */
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 0px;
+
+	/* Inside auto layout */
+
+	flex: none;
+	order: 0;
+	flex-grow: 1;
+}
+.paths-extension #paths-action {
+	/* Show Command Palatte */
+
+	font-family: 'SF Pro Display Light';
+
+	font-size: 12px;
+	line-height: 14px;
+
+	/* Dark/Colors/Text - Secondary */
+
+	color: rgba(255, 255, 255, 0.786);
+
+	/* Inside auto layout */
+
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+}
+.paths-extension #paths-result-right {
+	/* Right */
+
+	/* Auto layout */
+
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: flex-start;
+	padding: 0px;
+	gap: 4px;
+
+	/* Inside auto layout */
+
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+}
+.paths-extension #paths-combination {
+	/* 1. Combination */
+
+	/* Auto layout */
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0px;
+	gap: 2px;
+
+	width: auto;
+	height: 22px;
+
+	/* Inside auto layout */
+
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+}
+.paths-extension #paths-combination-key {
+	/* Key */
+
+	/* Auto layout */
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 4px 5px;
+
+	width: 22px;
+	height: 22px;
+
+	/* Dark/Control/Fill */
+
+	background: rgba(255, 255, 255, 0.0605);
+	border-radius: 2px;
+
+	/* Inside auto layout */
+
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+}
+.paths-extension #paths-combination-key span {
+	/* ⌘ */
+
+	width: 12px;
+	height: 14px;
+
+	font-family: 'SF Pro Display Light';
+
+	font-size: 12px;
+	line-height: 14px;
+	text-align: center;
+
+	/* Dark/Colors/Text - Secondary */
+
+	color: rgba(255, 255, 255, 0.786);
+
+	/* Inside auto layout */
+
+	flex: none;
+	order: 0;
+	flex-grow: 0;
 }

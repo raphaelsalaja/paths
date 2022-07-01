@@ -1,5 +1,6 @@
 export const youtube = {
 	title: 'Youtube',
+	icon: 'youtube.png',
 	sections: [
 		{
 			name: 'Playback',
@@ -96,7 +97,7 @@ export const youtube = {
 				},
 				{
 					description: 'Rotate through font sizes (increasing)',
-					shortcut: [' + '],
+					shortcut: ['+'],
 				},
 				{
 					description: 'Rotate through font sizes (decreasing)',
@@ -125,11 +126,11 @@ export const youtube = {
 				},
 				{
 					description: 'Zoom in',
-					shortcut: [' +  ', ' ]'],
+					shortcut: ['+', ' ]'],
 				},
 				{
 					description: 'Zoom out',
-					shortcut: ['- ', ' ['],
+					shortcut: ['-', '['],
 				},
 			],
 		},
