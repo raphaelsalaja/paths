@@ -16,8 +16,10 @@ chrome.alarms.onAlarm.addListener(function (alarm) {
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 	switch (message.request) {
-		case 'get-shorcuts':
-			sendResponse({data: data})
+		case 'get-shortcuts':
+			// send the shortcuts to the content script
+			console.log(data)
+			sendResponse({shortcuts: data})
 			break
 		case 'get-quote':
 			sendResponse({quote: dailyQuote})

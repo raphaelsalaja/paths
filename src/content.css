@@ -174,6 +174,9 @@
 	height: 100%;
 	z-index: 9999;
 }
+.paths-hidden {
+	display: none;
+}
 .paths-extension ::-webkit-scrollbar {
 	width: 8px;
 }
@@ -230,7 +233,7 @@
 	padding: 0px;
 
 	position: absolute;
-	width: 1000px;
+	width: 912px;
 	height: 724px;
 	left: calc(50% - 912px / 2);
 	top: calc(50% - 724px / 2);
@@ -267,6 +270,10 @@
 	order: 0;
 	align-self: stretch;
 	flex-grow: 0;
+
+	overflow-y: overlay;
+	overflow-x: hidden;
+	height: -webkit-fill-available;
 }
 .paths-extension #paths-search {
 	/* Search Bar */
@@ -439,7 +446,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	padding: 8px 0px;
+	padding: 16px 0px 8px 0px;
 	gap: 8px;
 
 	/* Dark/Colors/Divider Stroke */
@@ -522,6 +529,7 @@
 	align-items: flex-start;
 	padding: 0px;
 	gap: 16px;
+	max-width: 250px;
 
 	/* Inside auto layout */
 
@@ -540,6 +548,7 @@
 	padding: 0px;
 	gap: 16px;
 
+	max-width: 250px;
 	/* Inside auto layout */
 
 	flex: none;
@@ -557,6 +566,7 @@
 	padding: 0px;
 	gap: 16px;
 
+	max-width: 250px;
 	/* Inside auto layout */
 
 	flex: none;
@@ -572,7 +582,6 @@
 	flex-direction: row;
 	align-items: center;
 	padding: 0px;
-	gap: 16px;
 
 	/* Inside auto layout */
 
@@ -618,6 +627,12 @@
 	flex: none;
 	order: 0;
 	flex-grow: 0;
+}
+.paths-extension #paths-action span {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	max-width: 100px;
 }
 .paths-extension #paths-result-right {
 	/* Right */
@@ -666,7 +681,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 4px 5px;
+	padding: 4px 6px;
 
 	width: 22px;
 	height: 22px;
@@ -685,7 +700,7 @@
 .paths-extension #paths-combination-key span {
 	/* ⌘ */
 
-	width: 12px;
+	width: auto;
 	height: 14px;
 
 	font-family: 'SF Pro Display Light';
