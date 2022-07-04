@@ -1,28 +1,27 @@
 import {data} from './data/data.js'
 
-let dailyQuote
+let dailyFact
 
 chrome.runtime.onInstalled.addListener(function () {
 	console.clear()
-	setQuote()
+	setFact()
 	chrome.alarms.create('update-quote', {periodInMinutes: 1440})
 })
 
 chrome.alarms.onAlarm.addListener(function (alarm) {
 	if (alarm.name === 'update-quote') {
-		setQuote()
+		setFact()
 	}
 })
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 	switch (message.request) {
 		case 'get-shortcuts':
-			// send the shortcuts to the content script
 			console.log(data)
 			sendResponse({shortcuts: data})
 			break
-		case 'get-quote':
-			sendResponse({quote: dailyQuote})
+		case 'get-fact':
+			sendResponse({fact: dailyFact})
 			break
 	}
 })
@@ -31,16 +30,17 @@ chrome.action.onClicked.addListener((tab) => {
 	chrome.tabs.sendMessage(tab.id, {message: 'open-paths'}, function (response) {})
 })
 
-function setQuote() {
-	fetch('https://zenquotes.io/api/today')
+function setFact() {
+	fetch('https://cat-fact.herokuapp.com/facts')
 		.then((response) => response.json())
-		.then((quote) => {
-			dailyQuote = quote
+		.then((fact) => {
+			// get the first fact
+			dailyFact = fact
 		})
 		.then(() => {
 			chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
-				chrome.tabs.sendMessage(tabs[0].id, {quote: dailyQuote}, function (response) {
-					console.log(dailyQuote)
+				chrome.tabs.sendMessage(tabs[0].id, {quote: dailyFact}, function (response) {
+					console.log(dailyFact)
 				})
 			})
 		})

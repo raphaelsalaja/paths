@@ -1,5 +1,6 @@
 export const notion = {
 	title: 'Notion',
+	icon: 'https://www.notion.so/front-static/favicon.ico',
 	sections: [
 		{
 			name: 'Main',

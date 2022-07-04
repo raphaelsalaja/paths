@@ -182,7 +182,6 @@
 }
 .paths-extension ::-webkit-scrollbar-track {
 	background-color: var(--transparent);
-	padding: 4px;
 }
 .paths-extension ::-webkit-scrollbar-thumb {
 	background-color: var(--color-border);
@@ -206,6 +205,7 @@
 	height: 100%;
 	border: 0px;
 	outline: 0px;
+	color: rgba(255, 255, 255, 0.786);
 }
 .paths-extension input:focus {
 	outline: none;
@@ -254,15 +254,11 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 32px;
+	margin: 32px;
 	gap: 24px;
 
 	width: auto;
-	height: 100%;
-
-	/* Note: backdrop-filter has minimal browser support */
-
-	border-radius: 8px;
+	height: -webkit-fill-available;
 
 	/* Inside auto layout */
 
@@ -271,9 +267,8 @@
 	align-self: stretch;
 	flex-grow: 0;
 
-	overflow-y: overlay;
+	overflow-y: hidden;
 	overflow-x: hidden;
-	height: -webkit-fill-available;
 }
 .paths-extension #paths-search {
 	/* Search Bar */
@@ -287,7 +282,6 @@
 	justify-content: center;
 	align-items: flex-start;
 	padding: 8px;
-
 	width: auto;
 
 	/* Dark/Control/Fill */
@@ -303,6 +297,120 @@
 	align-self: stretch;
 	flex-grow: 0;
 }
+.paths-extension #paths-cat-facts {
+	/* Cat Facts */
+
+	box-sizing: border-box;
+
+	/* Auto layout */
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 8px;
+
+	width: auto;
+	height: auto;
+
+	background: rgba(255, 193, 43, 0.25);
+	border: 1px solid rgba(255, 255, 255, 0.093);
+	border-radius: 8px;
+
+	/* Inside auto layout */
+
+	flex: none;
+	order: 1;
+	align-self: stretch;
+	flex-grow: 0;
+}
+.paths-extension #paths-cat-facts-container {
+	/* Container */
+
+	/* Auto layout */
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0px;
+	gap: 10px;
+
+	width: 832px;
+	height: 32px;
+
+	/* Inside auto layout */
+
+	flex: none;
+	order: 0;
+	align-self: stretch;
+	flex-grow: 0;
+}
+.paths-extension #paths-cat-facts-emoji {
+	/* Rectangle */
+	min-width: 32px;
+	min-height: 32px;
+	max-width: 32px;
+	max-height: 32px;
+
+	background: url('chrome-extension://__MSG_@@extension_id__/assets/cat.png');
+	background-size: 32px;
+
+	/* Inside auto layout */
+
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+}
+.paths-extension #paths-cat-facts-text {
+	/* While us humans have 206 bones, cats on average have 244. It ranges between 230-250 depending on how long a cat’s tail is and how many toes the cat has. Amazing right? */
+
+	width: min-content;
+	height: auto;
+
+	font-family: 'SF Pro Display';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 14px;
+
+	/* Dark/Colors/Text - Secondary */
+
+	color: rgba(255, 255, 255, 0.786);
+
+	/* Inside auto layout */
+
+	flex: none;
+	order: 1;
+	flex-grow: 1;
+}
+.paths-extension #paths-list {
+	/* Main */
+
+	/* Auto layout */
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	gap: 24px;
+
+	width: auto;
+	/* // 724-32 =   */
+
+	height: 516px;
+
+	/* Inside auto layout */
+
+	flex: none;
+	order: 2;
+	align-self: stretch;
+	flex-grow: 0;
+
+	padding-right: 24px;
+
+	overflow-y: overlay;
+	overflow-x: hidden;
+}
 .paths-extension #paths-search-box {
 	/* Box */
 
@@ -312,10 +420,12 @@
 	flex-direction: row;
 	align-items: center;
 	padding: 0px;
-	gap: 16px;
+	margin: 0px;
 
+	background-color: var(--transparent);
+	border-color: var(--transparent);
 	width: 184px;
-	height: 16px;
+	height: auto;
 
 	/* Inside auto layout */
 
@@ -683,8 +793,8 @@
 	align-items: center;
 	padding: 4px 6px;
 
-	width: 22px;
-	height: 22px;
+	min-width: 24px;
+	min-height: 24px;
 
 	/* Dark/Control/Fill */
 
