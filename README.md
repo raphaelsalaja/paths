@@ -23,7 +23,7 @@ If you would like to contribute to this project, please open an issue or pull re
  
  ## Using The Application 🔥
 
-Opening/Closing Paths can be done by pressing the app button on the top bar.
+Opening/Closing Paths can be done by pressing the app button on the top bar.<br>
 <kbd>/</kbd> followed by a website name will show all the shortcuts relevant to it
  
 ## Support 💌
