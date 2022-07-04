@@ -21,6 +21,11 @@ If you would like to contribute to this project, please open an issue or pull re
  - Navigate to the src folder and click OK
  - Enable The Extension
  
+ ## Using The Application 🔥
+
+Opening/Closing Paths can be done by pressing the app button on the top bar.
+<kbd>/</kbd> followed by a website name will show all the shortcuts relevant to it
+ 
 ## Support 💌
 
 If you find the app useful and want to support me, you can do so by support me on Product Hunt, giving the repo a star on Github, or by following me on twitter. The links to all can be found below:
