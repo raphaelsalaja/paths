@@ -233,9 +233,9 @@
 	padding: 0px;
 
 	position: absolute;
-	width: 912px;
+	width: 1200px;
 	height: 724px;
-	left: calc(50% - 912px / 2);
+	left: calc(50% - 1200px / 2);
 	top: calc(50% - 724px / 2);
 
 	background: linear-gradient(0deg, rgba(32, 32, 32, 1), rgba(32, 32, 32, 1)), rgba(32, 32, 32, 1);
@@ -639,7 +639,7 @@
 	align-items: flex-start;
 	padding: 0px;
 	gap: 16px;
-	max-width: 250px;
+	max-width: 340px;
 
 	/* Inside auto layout */
 
@@ -658,7 +658,7 @@
 	padding: 0px;
 	gap: 16px;
 
-	max-width: 250px;
+	max-width: 340px;
 	/* Inside auto layout */
 
 	flex: none;
@@ -676,7 +676,7 @@
 	padding: 0px;
 	gap: 16px;
 
-	max-width: 250px;
+	max-width: 340px;
 	/* Inside auto layout */
 
 	flex: none;
@@ -742,7 +742,7 @@
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
-	max-width: 100px;
+	max-width: 180px;
 }
 .paths-extension #paths-result-right {
 	/* Right */

@@ -17,7 +17,7 @@ $(document).ready(() => {
 		clear_shortcuts()
 	}
 	function clear_shortcuts() {
-		$('#paths-extension #paths-shortcuts').empty()
+		$('#paths-extension #paths-list').empty()
 	}
 	function set_shortcuts() {
 		// get the shortcuts from the background script
@@ -138,7 +138,18 @@ $(document).ready(() => {
 	}
 	function search_shortcuts() {
 		let search_box_value = $('#paths-search-box').val()
+		// scroll to top of list
+		$('#paths-list').scrollTop(0)
 		if (search_box_value == '' || search_box_value.length == 0) {
+			$('div[id="paths-shortcut"]').each(function () {
+				$(this).show()
+			})
+			$('div[id="paths-shortcuts-section"]').each(function () {
+				$(this).show()
+			})
+			$('div[id="paths-shortcuts-section-results-group"]').each(function () {
+				$(this).show()
+			})
 			$('div[id="paths-shortcuts-section-results-group-column-1"]').each(function () {
 				$(this).show()
 			})
@@ -146,9 +157,6 @@ $(document).ready(() => {
 				$(this).show()
 			})
 			$('div[id="paths-shortcuts-section-results-group-column-3"]').each(function () {
-				$(this).show()
-			})
-			$('div[id="paths-shortcut"]').each(function () {
 				$(this).show()
 			})
 		} else if (search_box_value.startsWith('/')) {
@@ -177,6 +185,21 @@ $(document).ready(() => {
 					} else {
 						$(this).hide()
 					}
+				}
+			})
+			$('div[id="paths-shortcuts-section"]').each(function () {
+				let shortcuts_visible = false
+				$(this)
+					.find('div[id="paths-shortcut"]')
+					.each(function () {
+						if ($(this).css('display') != 'none') {
+							shortcuts_visible = true
+						}
+					})
+				if (shortcuts_visible) {
+					$(this).show()
+				} else {
+					$(this).hide()
 				}
 			})
 			$('div[id="paths-shortcuts-section-results-group"]').each(function () {
@@ -241,6 +264,7 @@ $(document).ready(() => {
 					.find('div[id="paths-shortcut"]')
 					.each(function () {
 						// use css to check if the element is visible
+						console.log($(this).css('display'))
 						if ($(this).css('display') != 'none') {
 							shortcuts_visible = true
 						}
@@ -255,14 +279,8 @@ $(document).ready(() => {
 	}
 	function set_fact() {
 		chrome.runtime.sendMessage({request: 'get-fact'}, (response) => {
-			try {
-				console.log(response)
-				let _fact = response.fact[Math.floor(Math.random() * response.fact.length)]
-				$('#paths-cat-facts-text').text(_fact.text)
-			} catch (error) {
-				$('#paths-cat-facts-text').text('There are no cat facts available at this time 😔')
-				console.log("Can't get a quote")
-			}
+			let fact_text = response.fact.text
+			$('#paths-cat-facts-text').text(fact_text)
 		})
 	}
 	$(document).on('input', '#paths-search-box', search_shortcuts)

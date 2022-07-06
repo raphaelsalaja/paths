@@ -21,7 +21,10 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 			sendResponse({shortcuts: data})
 			break
 		case 'get-fact':
-			sendResponse({fact: dailyFact})
+			console.log(dailyFact)
+			let fact = dailyFact[Math.floor(Math.random() * dailyFact.length)]
+			console.log(fact.text)
+			sendResponse({fact: fact})
 			break
 	}
 })
