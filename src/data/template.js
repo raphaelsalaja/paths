@@ -1,4 +1,4 @@
-export const youtube = {
+export const template = {
 	title: 'Title',
 	icon: '', // use a favicon, such as https://www.youtube.com/favicon.ico
 	sections: [

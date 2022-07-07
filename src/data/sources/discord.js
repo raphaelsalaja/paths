@@ -1,6 +1,6 @@
-export const youtube = {
+export const discord = {
 	title: 'Discord',
-	icon: 'https://www.youtube.com/favicon.ico',
+	icon: 'https://discord.com/assets/847541504914fd33810e70a0ea73177e.ico',
 	sections: [
 		{
 			name: 'General',
