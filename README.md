@@ -1,4 +1,9 @@
- ## Why would you use this? 🔎
+<p align="center">
+    <img width="1012" alt="Twitter" src="https://user-images.githubusercontent.com/52125687/177175352-e906777b-4af9-498e-8e45-76ad5875dfd2.png"></br>
+</p>
+
+
+## Why would you use this? 🔎
 
 Learning shortcuts and quick commands can almost double your productivity. This makes completing tasks faster and easier. Paths shows you the all the available shortcuts and commands for any of the most popular pages
 
@@ -20,6 +25,11 @@ If you would like to contribute to this project, please open an issue or pull re
  - Click Load unpacked extension…
  - Navigate to the src folder and click OK
  - Enable The Extension
+ 
+ ## Using The Application 🔥
+
+Opening/Closing Paths can be done by pressing the app button on the top bar.<br>
+<kbd>/</kbd> followed by a website name will show all the shortcuts relevant to it
  
 ## Support 💌
 
