@@ -20,7 +20,6 @@ $(document).ready(() => {
 		$('#paths-extension #paths-list').empty()
 	}
 	function set_shortcuts() {
-		// get the shortcuts from the background script
 		chrome.runtime.sendMessage({request: 'get-shortcuts'}, (response) => {
 			for (let i = 0; i < response.shortcuts.length; i++) {
 				let $paths_shortcut_section = $('<div>', {
@@ -87,7 +86,8 @@ $(document).ready(() => {
 						let $paths_action_text = $('<span>', {
 							'id': 'paths-action-text',
 							'text': response.shortcuts[i].sections[j].shortcuts[k].description,
-							'data-action': response.shortcuts[i].sections[j].shortcuts[k].description,
+							'data-action':
+								response.shortcuts[i].sections[j].shortcuts[k].description,
 						})
 						let $paths_result_right = $('<div>', {
 							id: 'paths-result-right',
@@ -95,8 +95,12 @@ $(document).ready(() => {
 						let $paths_combination = $('<div>', {
 							id: 'paths-combination',
 						})
-						// for each combination key
-						for (let l = 0; l < response.shortcuts[i].sections[j].shortcuts[k].keys.length; l++) {
+
+						for (
+							let l = 0;
+							l < response.shortcuts[i].sections[j].shortcuts[k].keys.length;
+							l++
+						) {
 							let $paths_combination_key = $('<div>', {
 								id: 'paths-combination-key',
 							})
@@ -122,13 +126,27 @@ $(document).ready(() => {
 							$paths_shortcuts_section_results_group_column_3.append($paths_shortcut)
 						}
 					}
-					$paths_shortcuts_section_results_group_columns_container.append($paths_shortcuts_section_results_group_column_1)
-					$paths_shortcuts_section_results_group_columns_container.append($paths_shortcuts_section_results_group_column_2)
-					$paths_shortcuts_section_results_group_columns_container.append($paths_shortcuts_section_results_group_column_3)
-					$paths_shortcuts_section_results_group_heading_container.append($paths_shortcuts_section_results_group_heading_text)
-					$paths_shortcuts_section_results_group_heading.append($paths_shortcuts_section_results_group_heading_container)
-					$paths_shortcuts_section_results_group.append($paths_shortcuts_section_results_group_heading)
-					$paths_shortcuts_section_results_group.append($paths_shortcuts_section_results_group_columns_container)
+					$paths_shortcuts_section_results_group_columns_container.append(
+						$paths_shortcuts_section_results_group_column_1
+					)
+					$paths_shortcuts_section_results_group_columns_container.append(
+						$paths_shortcuts_section_results_group_column_2
+					)
+					$paths_shortcuts_section_results_group_columns_container.append(
+						$paths_shortcuts_section_results_group_column_3
+					)
+					$paths_shortcuts_section_results_group_heading_container.append(
+						$paths_shortcuts_section_results_group_heading_text
+					)
+					$paths_shortcuts_section_results_group_heading.append(
+						$paths_shortcuts_section_results_group_heading_container
+					)
+					$paths_shortcuts_section_results_group.append(
+						$paths_shortcuts_section_results_group_heading
+					)
+					$paths_shortcuts_section_results_group.append(
+						$paths_shortcuts_section_results_group_columns_container
+					)
 
 					$paths_shortcut_section.append($paths_shortcuts_section_results_group)
 					$('#paths-list').append($paths_shortcut_section)
@@ -137,8 +155,7 @@ $(document).ready(() => {
 		})
 	}
 	function search_shortcuts() {
-		let search_box_value = $('#paths-search-box').val()
-		// scroll to top of list
+		let search_box_value = $('#paths-search-box').val().toLowerCase()
 		$('#paths-list').scrollTop(0)
 		if (search_box_value == '' || search_box_value.length == 0) {
 			$('div[id="paths-shortcut"]').each(function () {
@@ -162,29 +179,24 @@ $(document).ready(() => {
 		} else if (search_box_value.startsWith('/')) {
 			let search_box_value_without_slash = search_box_value.substring(1)
 			$('div[id="paths-shortcuts-section-title-text"]').each(function () {
-				// lower case the text
 				let text = $(this).text().toLowerCase()
-				// if the text contains the search box value
+
 				if (text.includes(search_box_value_without_slash)) {
-					// show all the shortcuts in the section
 					$(this).parent().parent().parent().show()
 				} else {
-					// hide the section
 					$(this).parent().parent().parent().hide()
 				}
 			})
 		} else {
 			$('div[id="paths-shortcut"]').each(function () {
-				if (search_box_value == '' || search_box_value.length == 0) {
+				let shortcut_action_text_lowercase = $(this)
+					.find('#paths-action-text')
+					.attr('data-action')
+					.toLowerCase()
+				if (shortcut_action_text_lowercase.includes(search_box_value)) {
 					$(this).show()
 				} else {
-					let search_box_value_lowercase = search_box_value.toLowerCase()
-					let shortcut_action_text_lowercase = $(this).find('#paths-action-text').attr('data-action').toLowerCase()
-					if (shortcut_action_text_lowercase.includes(search_box_value_lowercase)) {
-						$(this).show()
-					} else {
-						$(this).hide()
-					}
+					$(this).hide()
 				}
 			})
 			$('div[id="paths-shortcuts-section"]').each(function () {
@@ -203,14 +215,11 @@ $(document).ready(() => {
 				}
 			})
 			$('div[id="paths-shortcuts-section-results-group"]').each(function () {
-				if (search_box_value == '' || search_box_value.length == 0) {
-					$(this).show()
-				}
 				let shortcuts_visible = false
 				$(this)
 					.find('div[id="paths-shortcut"]')
 					.each(function () {
-						if ($(this).is(':visible')) {
+						if ($(this).css('display') != 'none') {
 							shortcuts_visible = true
 						}
 					})
@@ -221,13 +230,10 @@ $(document).ready(() => {
 				}
 			})
 			$('div[id="paths-shortcuts-section-results-group-column-1"]').each(function () {
-				// if every ('div[id="paths-shortcut"]') has display: none, then hide the column
-				// else show the column
 				let shortcuts_visible = false
 				$(this)
 					.find('div[id="paths-shortcut"]')
 					.each(function () {
-						// use css to check if the element is visible
 						if ($(this).css('display') != 'none') {
 							shortcuts_visible = true
 						}
@@ -239,13 +245,10 @@ $(document).ready(() => {
 				}
 			})
 			$('div[id="paths-shortcuts-section-results-group-column-2"]').each(function () {
-				// if every ('div[id="paths-shortcut"]') has display: none, then hide the column
-				// else show the column
 				let shortcuts_visible = false
 				$(this)
 					.find('div[id="paths-shortcut"]')
 					.each(function () {
-						// use css to check if the element is visible
 						if ($(this).css('display') != 'none') {
 							shortcuts_visible = true
 						}
@@ -257,14 +260,10 @@ $(document).ready(() => {
 				}
 			})
 			$('div[id="paths-shortcuts-section-results-group-column-3"]').each(function () {
-				// if every ('div[id="paths-shortcut"]') has display: none, then hide the column
-				// else show the column
 				let shortcuts_visible = false
 				$(this)
 					.find('div[id="paths-shortcut"]')
 					.each(function () {
-						// use css to check if the element is visible
-						console.log($(this).css('display'))
 						if ($(this).css('display') != 'none') {
 							shortcuts_visible = true
 						}
@@ -275,6 +274,7 @@ $(document).ready(() => {
 					$(this).hide()
 				}
 			})
+			$
 		}
 	}
 	function set_fact() {
@@ -296,5 +296,15 @@ $(document).ready(() => {
 				break
 		}
 		return true
+	})
+	$(document).on('click', '#paths-overlay', function (e) {
+		if (e.target.id == 'paths-overlay') {
+			close_paths()
+		}
+	})
+	$(document).keyup(function (e) {
+		if (e.keyCode == 27) {
+			close_paths()
+		}
 	})
 })
