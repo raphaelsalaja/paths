@@ -253,13 +253,12 @@
 	flex-grow: 0;
 }
 .paths-extension #paths-cat-facts-text {
-	width: min-content;
+	width: auto;
 	height: auto;
 	font-family: 'Segoe UI Regular' !important;
-	font-style: normal !important;
-	font-weight: 600 !important;
-	font-size: 12px !important;
-	line-height: 14px !important;
+	font-style: normal;
+	font-size: 14px;
+	line-height: 14px;
 	color: rgba(255, 255, 255, 0.786);
 	flex: none;
 	order: 1;
