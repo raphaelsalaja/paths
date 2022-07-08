@@ -1,6 +1,6 @@
 export const adobe_xd = {
 	title: 'Adobe XD',
-	icon: 'https://www.adobe.com/content/dam/cc/us/en/products/xd/max2021-home/Adobe-XD-Logo-White.svg',
+	icon: 'https://www.adobe.com/content/dam/acom/one-console/icons_rebrand/xd_appicon.svg',
 	sections: [
 		{
 			name: 'Keys for Edit menu',
@@ -26,8 +26,7 @@ export const adobe_xd = {
 					keys: ['Ctrl', 'V'],
 				},
 				{
-					description:
-						'Paste Appearance (Design mode) or Paste Interaction (Prototype mode)',
+					description: 'Paste Appearance (Design mode) or Paste Interaction (Prototype mode)',
 					keys: ['Ctrl', 'Alt', 'V'],
 				},
 				{

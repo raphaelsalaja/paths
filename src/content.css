@@ -54,27 +54,6 @@
 	--z-index-front: 2147483647;
 	--z-index-middle: 1073741823;
 	--z-index-back: -2147483648;
-	--color-light-background: #191919;
-	--color-light-border: #2b2b2b;
-	--color-light-hover: #292929;
-	--color-light-tab: #001c0d;
-	--color-light-tab-text: #1e9850;
-	--color-light-action: #72000c;
-	--color-light-action-text: #ee1e34;
-	--color-light-bookmark: #004865;
-	--color-light-bookmark-text: #11b3f3;
-	--color-light-support: #480065;
-	--color-light-support-text: #9c11f3;
-	--color-dark-quicklink: #5b6500;
-	--color-dark-quicklink-text: #d9f311;
-	--color-dark-tool: #646464;
-	--color-dark-tool-text: #efefef;
-	--color-light-key: #4b4b4b;
-	--color-light-key-text: #e2e2e2;
-	--color-light-text: #cdcdcd;
-	--color-light-text-hover: #ffffff;
-	--color-light-search-placeholder: #5f5f5f;
-	--color-light-placeholder: #292929;
 	--color-dark-background: #191919;
 	--color-dark-border: #2b2b2b;
 	--color-dark-hover: #292929;
@@ -99,58 +78,28 @@
 }
 
 @font-face {
-	font-family: 'SF Pro Display Ultralight';
-	font-style: normal;
-	font-weight: 100;
-	src: url('chrome-extension://__MSG_@@extension_id__/assets/fonts/SFProDisplay-Ultralight.ttf');
-}
-@font-face {
-	font-family: 'SF Pro Display Thin';
-	font-style: normal;
-	font-weight: 200;
-	src: url('chrome-extension://__MSG_@@extension_id__/assets/fonts/SFProDisplay-Thin.ttf');
-}
-@font-face {
-	font-family: 'SF Pro Display Light';
+	font-family: 'Segoe UI Light';
 	font-style: normal;
 	font-weight: 300;
-	src: url('chrome-extension://__MSG_@@extension_id__/assets/fonts/SFProDisplay-Light.ttf');
+	src: url('chrome-extension://__MSG_@@extension_id__/fonts/Segoe-UI.ttf');
 }
 @font-face {
-	font-family: 'SF Pro Display Regular';
+	font-family: 'Segoe UI Regular';
 	font-style: normal;
 	font-weight: 400;
-	src: url('chrome-extension://__MSG_@@extension_id__/assets/fonts/SFProDisplay-Regular.ttf');
+	src: url('chrome-extension://__MSG_@@extension_id__/fonts/Segoe-UI.ttf');
 }
 @font-face {
-	font-family: 'SF Pro Display Medium';
+	font-family: 'Segoe UI Medium';
 	font-style: normal;
 	font-weight: 500;
-	src: url('chrome-extension://__MSG_@@extension_id__/assets/fonts/SFProDisplay-Medium.ttf');
+	src: url('chrome-extension://__MSG_@@extension_id__/fonts/Segoe-UI.ttf');
 }
 @font-face {
-	font-family: 'SF Pro Display Semibold';
+	font-family: 'Segoe UI Bold';
 	font-style: normal;
 	font-weight: 600;
-	src: url('chrome-extension://__MSG_@@extension_id__/assets/fonts/SFProDisplay-SemiBold.ttf');
-}
-@font-face {
-	font-family: 'SF Pro Display Bold';
-	font-style: normal;
-	font-weight: 700;
-	src: url('chrome-extension://__MSG_@@extension_id__/assets/fonts/SFProDisplay-Bold.ttf');
-}
-@font-face {
-	font-family: 'SF Pro Display Black';
-	font-style: normal;
-	font-weight: 800;
-	src: url('chrome-extension://__MSG_@@extension_id__/assets/fonts/SFProDisplay-Black.ttf');
-}
-@font-face {
-	font-family: 'SF Pro Display Heavy';
-	font-style: normal;
-	font-weight: 900;
-	src: url('chrome-extension://__MSG_@@extension_id__/assets/fonts/SFProDisplay-Heavy.ttf');
+	src: url('chrome-extension://__MSG_@@extension_id__/fonts/Segoe-UI.ttf');
 }
 
 .paths-extension * {
@@ -189,9 +138,9 @@
 	border-radius: '4px';
 }
 .paths-extension ::-webkit-input-placeholder {
-	font-family: 'SF Pro Display Semibold';
+	font-family: 'Segoe UI Medium';
 	font-size: 12px;
-	line-height: 14px;
+	line-height: normal;
 	color: rgba(255, 255, 255, 0.786);
 }
 .paths-extension input {
@@ -306,7 +255,7 @@
 .paths-extension #paths-cat-facts-text {
 	width: min-content;
 	height: auto;
-	font-family: 'SF Pro Display' !important;
+	font-family: 'Segoe UI Regular' !important;
 	font-style: normal !important;
 	font-weight: 600 !important;
 	font-size: 12px !important;
@@ -392,8 +341,9 @@
 	flex-grow: 0;
 }
 .paths-extension #paths-shortcuts-section-title-text {
-	font-family: 'SF Pro Display Bold';
-	font-size: 16px;
+	font-family: 'Segoe UI Bold';
+	line-height: 14px;
+	font-size: 14px;
 	color: #ffffff;
 	flex: none;
 	order: 1;
@@ -437,7 +387,7 @@
 .paths-extension #paths-shortcuts-section-results-group-heading-container span {
 	width: auto;
 	height: auto;
-	font-family: 'SF Pro Display Regular';
+	font-family: 'Segoe UI Regular';
 	font-size: 14px;
 	line-height: 17px;
 	color: rgba(255, 255, 255, 0.786);
@@ -513,15 +463,15 @@
 	flex-grow: 1;
 }
 .paths-extension #paths-action {
-	font-family: 'SF Pro Display Light';
-	font-size: 12px;
-	line-height: 14px;
-	color: rgba(255, 255, 255, 0.786);
 	flex: none;
 	order: 0;
 	flex-grow: 0;
 }
 .paths-extension #paths-action span {
+	font-family: 'Segoe UI Light';
+	font-size: 12px;
+	line-height: normal;
+	color: rgba(255, 255, 255, 0.786);
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
@@ -567,9 +517,9 @@
 .paths-extension #paths-combination-key span {
 	width: auto;
 	height: 14px;
-	font-family: 'SF Pro Display Light';
+	font-family: 'Segoe UI Light';
 	font-size: 12px;
-	line-height: 14px;
+	line-height: 12px;
 	text-align: center;
 	color: rgba(255, 255, 255, 0.786);
 	flex: none;

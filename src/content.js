@@ -5,11 +5,11 @@ $(document).ready(() => {
 	})
 	function open_paths() {
 		paths_open = true
+		set_shortcuts()
+		set_fact()
 		$('#paths-extension').removeClass('paths-hidden')
 		$('#paths-extension #paths-search-box').focus()
 		$('#paths-extension #paths-search-box').attr('autocomplete', 'off')
-		set_fact()
-		set_shortcuts()
 	}
 	function close_paths() {
 		paths_open = false
@@ -86,8 +86,7 @@ $(document).ready(() => {
 						let $paths_action_text = $('<span>', {
 							'id': 'paths-action-text',
 							'text': response.shortcuts[i].sections[j].shortcuts[k].description,
-							'data-action':
-								response.shortcuts[i].sections[j].shortcuts[k].description,
+							'data-action': response.shortcuts[i].sections[j].shortcuts[k].description,
 						})
 						let $paths_result_right = $('<div>', {
 							id: 'paths-result-right',
@@ -96,17 +95,22 @@ $(document).ready(() => {
 							id: 'paths-combination',
 						})
 
-						for (
-							let l = 0;
-							l < response.shortcuts[i].sections[j].shortcuts[k].keys.length;
-							l++
-						) {
+						for (let l = 0; l < response.shortcuts[i].sections[j].shortcuts[k].keys.length; l++) {
 							let $paths_combination_key = $('<div>', {
 								id: 'paths-combination-key',
 							})
-							let $paths_combination_key_text = $('<span>', {
-								text: response.shortcuts[i].sections[j].shortcuts[k].keys[l],
-							})
+							let $paths_combination_key_text
+							if (response.shortcuts[i].sections[j].shortcuts[k].keys[l].length === 1) {
+								$paths_combination_key_text = $('<span>', {
+									text: response.shortcuts[i].sections[j].shortcuts[k].keys[l].toUpperCase(),
+								})
+							} else {
+								$paths_combination_key_text = $('<span>', {
+									'text': response.shortcuts[i].sections[j].shortcuts[k].keys[l].toUpperCase(),
+									'data-action': response.shortcuts[i].sections[j].shortcuts[k].keys[l].toUpperCase(),
+								})
+							}
+
 							$paths_combination_key.append($paths_combination_key_text)
 							$paths_combination.append($paths_combination_key)
 						}
@@ -126,27 +130,13 @@ $(document).ready(() => {
 							$paths_shortcuts_section_results_group_column_3.append($paths_shortcut)
 						}
 					}
-					$paths_shortcuts_section_results_group_columns_container.append(
-						$paths_shortcuts_section_results_group_column_1
-					)
-					$paths_shortcuts_section_results_group_columns_container.append(
-						$paths_shortcuts_section_results_group_column_2
-					)
-					$paths_shortcuts_section_results_group_columns_container.append(
-						$paths_shortcuts_section_results_group_column_3
-					)
-					$paths_shortcuts_section_results_group_heading_container.append(
-						$paths_shortcuts_section_results_group_heading_text
-					)
-					$paths_shortcuts_section_results_group_heading.append(
-						$paths_shortcuts_section_results_group_heading_container
-					)
-					$paths_shortcuts_section_results_group.append(
-						$paths_shortcuts_section_results_group_heading
-					)
-					$paths_shortcuts_section_results_group.append(
-						$paths_shortcuts_section_results_group_columns_container
-					)
+					$paths_shortcuts_section_results_group_columns_container.append($paths_shortcuts_section_results_group_column_1)
+					$paths_shortcuts_section_results_group_columns_container.append($paths_shortcuts_section_results_group_column_2)
+					$paths_shortcuts_section_results_group_columns_container.append($paths_shortcuts_section_results_group_column_3)
+					$paths_shortcuts_section_results_group_heading_container.append($paths_shortcuts_section_results_group_heading_text)
+					$paths_shortcuts_section_results_group_heading.append($paths_shortcuts_section_results_group_heading_container)
+					$paths_shortcuts_section_results_group.append($paths_shortcuts_section_results_group_heading)
+					$paths_shortcuts_section_results_group.append($paths_shortcuts_section_results_group_columns_container)
 
 					$paths_shortcut_section.append($paths_shortcuts_section_results_group)
 					$('#paths-list').append($paths_shortcut_section)
@@ -189,10 +179,7 @@ $(document).ready(() => {
 			})
 		} else {
 			$('div[id="paths-shortcut"]').each(function () {
-				let shortcut_action_text_lowercase = $(this)
-					.find('#paths-action-text')
-					.attr('data-action')
-					.toLowerCase()
+				let shortcut_action_text_lowercase = $(this).find('#paths-action-text').attr('data-action').toLowerCase()
 				if (shortcut_action_text_lowercase.includes(search_box_value)) {
 					$(this).show()
 				} else {
