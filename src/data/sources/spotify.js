@@ -1,6 +1,6 @@
 export const spotify = {
 	title: 'Spotify',
-	icon: '//www.scdn.co/i/_global/favicon.png',
+	icon: 'https://www.freepnglogos.com/uploads/spotify-logo-png/file-spotify-logo-png-4.png',
 	sections: [
 		{
 			name: 'General',

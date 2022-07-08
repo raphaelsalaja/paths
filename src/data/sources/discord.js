@@ -1,6 +1,6 @@
 export const discord = {
 	title: 'Discord',
-	icon: 'https://discord.com/assets/847541504914fd33810e70a0ea73177e.ico',
+	icon: 'https://www.freepnglogos.com/uploads/discord-logo-png/concours-discord-cartes-voeux-fortnite-france-6.png',
 	sections: [
 		{
 			name: 'General',
