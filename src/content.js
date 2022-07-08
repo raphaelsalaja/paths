@@ -289,10 +289,12 @@ $(document).ready(() => {
 			case 'open-paths':
 				paths_open ? close_paths() : open_paths()
 				sendResponse({return: 'paths opened'})
+				return true
 				break
 			case 'close-paths':
 				closepaths()
 				sendResponse({return: 'paths closed'})
+				return true
 				break
 		}
 		return true

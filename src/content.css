@@ -306,11 +306,11 @@
 .paths-extension #paths-cat-facts-text {
 	width: min-content;
 	height: auto;
-	font-family: 'SF Pro Display';
-	font-style: normal;
-	font-weight: 600;
-	font-size: 12px;
-	line-height: 14px;
+	font-family: 'SF Pro Display' !important;
+	font-style: normal !important;
+	font-weight: 600 !important;
+	font-size: 12px !important;
+	line-height: 14px !important;
 	color: rgba(255, 255, 255, 0.786);
 	flex: none;
 	order: 1;

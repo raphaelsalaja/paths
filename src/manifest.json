@@ -24,10 +24,10 @@
 	],
 	"web_accessible_resources": [
 		{
-			"resources": ["assets/*", "data/*", "source-icons/*", "content.html"],
+			"resources": ["assets/*", "data/*", "content.html"],
 			"matches": ["<all_urls>"]
 		}
 	],
-	"permissions": ["tabs", "activeTab", "browsingData", "scripting", "search", "alarms"],
-	"host_permissions": ["https://www.googleapis.com/*", "https://gstatic.com/*", "https://api.quotable.io/random", "*://*/*"]
+	"permissions": ["tabs", "activeTab", "scripting", "alarms"],
+	"host_permissions": ["https://api.quotable.io/random"]
 }

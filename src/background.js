@@ -9,29 +9,28 @@ chrome.runtime.onInstalled.addListener(function () {
 	setFact()
 	chrome.alarms.create('update-quote', {periodInMinutes: 1440})
 })
-
 chrome.alarms.onAlarm.addListener(function (alarm) {
 	if (alarm.name == 'update-quote') {
 		setFact()
 	}
 })
-
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 	switch (message.request) {
 		case 'get-shortcuts':
 			sendResponse({shortcuts: sources})
+			return true
 			break
 		case 'get-fact':
 			let fact = dailyFact[Math.floor(Math.random() * dailyFact.length)]
-
 			sendResponse({fact: fact})
+			return true
 			break
 	}
 })
-
 chrome.action.onClicked.addListener((tab) => {
 	chrome.tabs.sendMessage(tab.id, {message: 'open-paths'}, function (response) {})
 })
+chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => reorderData())
 
 function setFact() {
 	fetch('https://cat-fact.herokuapp.com/facts')
@@ -45,11 +44,9 @@ function setFact() {
 			})
 		})
 }
-
 const getCurrentTab = async () => {
 	return await chrome.tabs.query({active: true, currentWindow: true})
 }
-
 function reorderData() {
 	getCurrentTab().then((response) => {
 		// wrap in try/catch in case of error
@@ -68,5 +65,3 @@ function reorderData() {
 		}
 	})
 }
-
-chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => reorderData())
