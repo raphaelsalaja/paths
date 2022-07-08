@@ -288,7 +288,7 @@
 	margin: 0px;
 	background-color: var(--transparent);
 	border-color: var(--transparent);
-	width: 184px;
+	width: 100%;
 	height: auto;
 	flex: none;
 	order: 0;
