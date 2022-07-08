@@ -2,7 +2,6 @@
     <img width="1012" alt="Twitter" src="https://user-images.githubusercontent.com/52125687/177175352-e906777b-4af9-498e-8e45-76ad5875dfd2.png"></br>
 </p>
 
-
 ## Why would you use this? 🔎
 
 Learning shortcuts and quick commands can almost double your productivity. This makes completing tasks faster and easier. Paths shows you the all the available shortcuts and commands for any of the most popular pages
@@ -15,7 +14,59 @@ Using this you will be able to search for a shortcut or command and see what it 
 
 ## Contributions 🔮
 
-If you would like to contribute to this project, please open an issue or pull request. The best way to contribute is to add a new shortcut or command, or even add a new source. You can do this by seeing one of the already exitsing json files within the `data` folder and replicating it.
+If you would like to contribute to this project, please open an issue or pull request. 
+
+If you would like to add a shortcut or command you can do so by following these steps:
+
+1. Create a new .js file in the source folder. You can use the template file provided as a starting point.
+
+```
+.
+└── src
+    └── data
+        └── sources
+```
+
+```js
+export const template = {
+	title: 'Title',
+	icon: '', // use a favicon, such as https://www.youtube.com/favicon.ico
+	sections: [
+		{
+			name: 'Name1',
+			shortcuts: [
+				{
+					description: 'Description 1',
+					keys: ['Key1', 'Key2'],
+				},
+			],
+		},
+		{
+			name: 'Name2',
+			shortcuts: [
+				{
+					description: 'Description 1',
+					keys: ['Key1', 'Key2'],
+				},
+			],
+		},
+	],
+}
+```
+2. Add the new file import to the data.js file in the source folder.
+ 
+```js
+import {adobe_photoshop} from './sources/adobe-photoshop.js'
+...
+import {YOUR_CONTRIBUTION_HERE} from './sources/YOUR_CONTRIBUTION,.js'
+
+export const data = [
+	adobe_photoshop,
+...
+    YOUR_CONTRIBUTION_HERE,
+]
+```
+ 
 
 ## Local Installation 🏠
  
