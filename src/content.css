@@ -211,7 +211,7 @@
 	align-self: stretch;
 	flex-grow: 0;
 }
-.paths-extension #paths-cat-facts {
+.paths-extension #paths-quotes {
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
@@ -220,7 +220,7 @@
 	padding: 8px;
 	width: auto;
 	height: auto;
-	background: rgba(255, 193, 43, 0.25);
+	background: rgba(43, 114, 255, 0.25);
 	border: 1px solid rgba(255, 255, 255, 0.093);
 	border-radius: 8px;
 	flex: none;
@@ -228,7 +228,7 @@
 	align-self: stretch;
 	flex-grow: 0;
 }
-.paths-extension #paths-cat-facts-container {
+.paths-extension #paths-quotes-container {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -241,18 +241,18 @@
 	align-self: stretch;
 	flex-grow: 0;
 }
-.paths-extension #paths-cat-facts-emoji {
+.paths-extension #paths-quotes-emoji {
 	min-width: 32px;
 	min-height: 32px;
 	max-width: 32px;
 	max-height: 32px;
-	background: url('chrome-extension://__MSG_@@extension_id__/assets/cat.png');
+	background: url('chrome-extension://__MSG_@@extension_id__/assets/crystal-ball.png');
 	background-size: 32px;
 	flex: none;
 	order: 0;
 	flex-grow: 0;
 }
-.paths-extension #paths-cat-facts-text {
+.paths-extension #paths-quotes-text {
 	width: auto;
 	height: auto;
 	font-family: 'Segoe UI Regular' !important;

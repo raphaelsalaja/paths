@@ -265,9 +265,8 @@ $(document).ready(() => {
 		}
 	}
 	function set_fact() {
-		chrome.runtime.sendMessage({request: 'get-fact'}, (response) => {
-			let fact_text = response.fact.text
-			$('#paths-cat-facts-text').text(fact_text)
+		chrome.runtime.sendMessage({request: 'get-quote'}, (response) => {
+			$('#paths-quotes-text').text(response.quote)
 		})
 	}
 	$(document).on('input', '#paths-search-box', search_shortcuts)

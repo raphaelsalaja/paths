@@ -10,7 +10,7 @@ export const vs_code = {
 					keys: ['Ctrl', 'Shift', 'P'],
 				},
 				{
-					description: 'Quick Open, Go to File...',
+					description: 'Quick Open, Go to File',
 					keys: ['Ctrl', 'P'],
 				},
 				{
@@ -144,15 +144,15 @@ export const vs_code = {
 					keys: ['Ctrl', 'T'],
 				},
 				{
-					description: 'Go to Line...',
+					description: 'Go to Line',
 					keys: ['Ctrl', 'G'],
 				},
 				{
-					description: 'Go to File...',
+					description: 'Go to File',
 					keys: ['Ctrl', 'P'],
 				},
 				{
-					description: 'Go to Symbol...',
+					description: 'Go to Symbol',
 					keys: ['Ctrl', 'Shift', 'O'],
 				},
 				{
@@ -172,8 +172,12 @@ export const vs_code = {
 					keys: ['Ctrl', 'Shift', 'Tab'],
 				},
 				{
-					description: 'Go back/forward',
-					keys: ['Alt', 'Left/Right'],
+					description: 'Go forward',
+					keys: ['Alt', '→'],
+				},
+				{
+					description: 'Go back',
+					keys: ['Alt', '←'],
 				},
 				{
 					description: 'Toggle Tab moves focus',
@@ -251,11 +255,11 @@ export const vs_code = {
 				},
 				{
 					description: 'Expand selection',
-					keys: ['Shift', 'Alt', 'Right'],
+					keys: ['Shift', 'Alt', '→'],
 				},
 				{
 					description: 'Shrink selection',
-					keys: ['Shift', 'Alt', 'Left'],
+					keys: ['Shift', 'Alt', '←'],
 				},
 				{
 					description: 'Column (box) selection',
@@ -348,16 +352,28 @@ export const vs_code = {
 					keys: ['Ctrl', '1/2/3'],
 				},
 				{
-					description: 'Focus into previous/next editor group',
-					keys: ['Ctrl', 'K', 'Ctrl', 'Left/Right'],
+					description: 'Focus into previous editor group',
+					keys: ['Ctrl', 'K', 'Ctrl', '←'],
 				},
 				{
-					description: 'Move editor left/right',
-					keys: ['Ctrl', 'Shift', 'PgUp/PgDown'],
+					description: 'Focus into next editor group',
+					keys: ['Ctrl', 'K', 'Ctrl', '→'],
 				},
 				{
-					description: 'Move active editor group',
-					keys: ['Ctrl', 'K', 'Left/Right'],
+					description: 'Move editor left',
+					keys: ['Ctrl', 'Shift', 'PgUp'],
+				},
+				{
+					description: 'Move editor right',
+					keys: ['Ctrl', 'Shift', 'PgDown'],
+				},
+				{
+					description: 'Move active editor group left',
+					keys: ['Ctrl', 'K', '←'],
+				},
+				{
+					description: 'Move active editor group right',
+					keys: ['Ctrl', 'K', '→'],
 				},
 			],
 		},
@@ -369,7 +385,7 @@ export const vs_code = {
 					keys: ['Ctrl', 'N'],
 				},
 				{
-					description: 'Open File...',
+					description: 'Open File',
 					keys: ['Ctrl', 'O'],
 				},
 				{
@@ -377,7 +393,7 @@ export const vs_code = {
 					keys: ['Ctrl', 'S'],
 				},
 				{
-					description: 'Save As...',
+					description: 'Save As',
 					keys: ['Ctrl', 'Shift', 'S'],
 				},
 				{

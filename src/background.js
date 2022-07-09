@@ -1,28 +1,22 @@
 import {data} from './data/data.js'
 
-let dailyFact
+let dailyQuote
 let sources = []
 sources = data
 
 chrome.runtime.onInstalled.addListener(function () {
 	console.clear()
-	setFact()
-	chrome.alarms.create('update-quote', {periodInMinutes: 1440})
-})
-chrome.alarms.onAlarm.addListener(function (alarm) {
-	if (alarm.name == 'update-quote') {
-		setFact()
-	}
+	setQuote()
 })
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 	switch (message.request) {
 		case 'get-shortcuts':
 			sendResponse({shortcuts: sources})
 			break
-		case 'get-fact':
-			console.log(dailyFact)
-			let fact = dailyFact[Math.floor(Math.random() * dailyFact.length())]
-			sendResponse({fact: fact})
+		case 'get-quote':
+			let quote = dailyQuote.content + ' - ' + dailyQuote.author
+			console.log(quote)
+			sendResponse({quote: quote})
 			break
 	}
 })
@@ -31,17 +25,15 @@ chrome.action.onClicked.addListener((tab) => {
 })
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => reorderData())
 
-function setFact() {
-	fetch('https://cat-fact.herokuapp.com/facts')
+function setQuote() {
+	fetch('https://api.quotable.io/random?tags=technology,famous-quotes')
 		.then((response) => response.json())
-		.then((fact) => {
-			dailyFact = fact
+		.then((quote) => {
+			dailyQuote = quote
 		})
 		.then(() => {
 			chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
-				chrome.tabs.sendMessage(tabs[0].id, {quote: dailyFact}, function (response) {
-					console.log(dailyFact)
-				})
+				chrome.tabs.sendMessage(tabs[0].id, {quote: dailyQuote}, function (response) {})
 			})
 		})
 }
@@ -50,19 +42,13 @@ const getCurrentTab = async () => {
 }
 function reorderData() {
 	getCurrentTab().then((response) => {
-		// wrap in try/catch in case of error
-		let page
-		try {
-			page = response[0].url.split('www.')[1].split('.')[0]
-		} catch (error) {}
+		let page = response[0].url.split('www.')[1].split('.')[0]
 		for (let i = 0; i < sources.length; i++) {
-			try {
-				if (sources[i].title.toLowerCase().includes(page.toLowerCase())) {
-					let temp = sources[0]
-					sources[0] = sources[i]
-					sources[i] = temp
-				}
-			} catch (error) {}
+			if (sources[i].title.toLowerCase().includes(page.toLowerCase())) {
+				let temp = sources[0]
+				sources[0] = sources[i]
+				sources[i] = temp
+			}
 		}
 	})
 }

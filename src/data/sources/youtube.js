@@ -42,7 +42,7 @@ export const youtube = {
 					keys: ['>'],
 				},
 				{
-					description: 'Seek to specific point in the video (7 advances to 70% of duration)',
+					description: 'Seek to a point e.g 7 = 70%',
 					keys: ['Numpad'],
 				},
 				{
@@ -96,11 +96,11 @@ export const youtube = {
 					keys: ['w'],
 				},
 				{
-					description: 'Rotate through font sizes (increasing)',
+					description: 'Increase font size',
 					keys: [','],
 				},
 				{
-					description: 'Rotate through font sizes (decreasing)',
+					description: 'Decrease font size',
 					keys: ['-'],
 				},
 			],
@@ -126,7 +126,7 @@ export const youtube = {
 				},
 				{
 					description: 'Zoom in',
-					keys: [', ', ' ]'],
+					keys: [',', ' ]'],
 				},
 				{
 					description: 'Zoom out',

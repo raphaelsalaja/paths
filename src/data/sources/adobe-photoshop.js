@@ -3,7 +3,7 @@ export const adobe_photoshop = {
 	icon: 'https://www.adobe.com/content/dam/acom/one-console/icons_rebrand/ps_appicon.svg',
 	sections: [
 		{
-			name: 'Popular shortcuts',
+			name: 'General',
 			shortcuts: [
 				{
 					description: 'Free transform',
@@ -125,7 +125,7 @@ export const adobe_photoshop = {
 			],
 		},
 		{
-			name: 'Select tools',
+			name: 'Select Tools',
 			shortcuts: [
 				{
 					description: 'Move tool',
@@ -152,13 +152,11 @@ export const adobe_photoshop = {
 					keys: ['I'],
 				},
 				{
-					description:
-						'Spot healing brush tool > healing brush tool > patch tool > red eye tool',
+					description: 'Spot healing brush tool > healing brush tool > patch tool > red eye tool',
 					keys: ['J'],
 				},
 				{
-					description:
-						'Brush tool > pencil tool > color replacement tool > mixer brush tool',
+					description: 'Brush tool > pencil tool > color replacement tool > mixer brush tool',
 					keys: ['B'],
 				},
 				{
@@ -186,8 +184,7 @@ export const adobe_photoshop = {
 					keys: ['P'],
 				},
 				{
-					description:
-						'Horizontal type tool > vertical type tool > horizontal type mask tool > vertical type mask tool',
+					description: 'Horizontal type tool > vertical type tool > horizontal type mask tool > vertical type mask tool',
 					keys: ['T'],
 				},
 				{
@@ -195,8 +192,7 @@ export const adobe_photoshop = {
 					keys: ['A'],
 				},
 				{
-					description:
-						'Rectangle tool > rounded rectangle tool > ellipse tool > polygon tool > line tool',
+					description: 'Rectangle tool > rounded rectangle tool > ellipse tool > polygon tool > line tool',
 					keys: ['U'],
 				},
 				{
@@ -277,13 +273,11 @@ export const adobe_photoshop = {
 					keys: ['Ctrl', 'Shift', 'W'],
 				},
 				{
-					description:
-						'Toggle forward between Standard screen > Full screen with menu bar > Full screen modes',
+					description: 'Toggle forward between Standard screen > Full screen with menu bar > Full screen modes',
 					keys: ['F'],
 				},
 				{
-					description:
-						'Toggle backwards between Standard screen > Full screen with menu bar > Full screen modes',
+					description: 'Toggle backwards between Standard screen > Full screen with menu bar > Full screen modes',
 					keys: ['Shift', 'F'],
 				},
 				{
@@ -311,12 +305,20 @@ export const adobe_photoshop = {
 					keys: ['Shift', 'Enter'],
 				},
 				{
-					description: 'Scroll up or down 1 screen',
-					keys: ['PgUp/PgDn'],
+					description: 'Scroll up 1 screen',
+					keys: ['PgUp'],
 				},
 				{
-					description: 'Scroll up or down 10 units',
-					keys: ['Shift', 'PgUp/PgDn'],
+					description: 'Scroll down 1 screen',
+					keys: ['PgDn'],
+				},
+				{
+					description: 'Scroll up 10 units',
+					keys: ['Shift', 'PgUp'],
+				},
+				{
+					description: 'Scroll down 10 units',
+					keys: ['Shift', 'PgDn'],
 				},
 				{
 					description: 'Move view to upper-left corner',
@@ -327,8 +329,7 @@ export const adobe_photoshop = {
 					keys: ['End'],
 				},
 				{
-					description:
-						'Toggle layer mask on/off as rubylith (layer mask must be selected)',
+					description: 'Toggle layer mask on/off as rubylith (layer mask must be selected)',
 					keys: ['\\'],
 				},
 			],
@@ -407,7 +408,7 @@ export const adobe_photoshop = {
 					keys: ['Alt'],
 				},
 				{
-					description: 'Undo/Redo',
+					description: 'Undo',
 					keys: ['Ctrl', 'Z'],
 				},
 				{
@@ -654,8 +655,7 @@ export const adobe_photoshop = {
 					keys: ['G'],
 				},
 				{
-					description:
-						'Temporarily switch from Add to Erase mode for the Adjustment brush tool, or from Erase to Add mode',
+					description: 'Temporarily switch from Add to Erase mode for the Adjustment brush tool, or from Erase to Add mode',
 					keys: ['Alt'],
 				},
 				{
@@ -667,13 +667,11 @@ export const adobe_photoshop = {
 					keys: ['Alt', 'Shift', ']/['],
 				},
 				{
-					description:
-						'Increase/decrease temporary adjustment brush tool size flow in increments of 10',
+					description: 'Increase/decrease temporary adjustment brush tool size flow in increments of 10',
 					keys: ['Alt', '=/-'],
 				},
 				{
-					description:
-						'Switch to New mode from Add or Erase mode of the Adjustment Brush tool or Graduated filter',
+					description: 'Switch to New mode from Add or Erase mode of the Adjustment Brush tool or Graduated filter',
 					keys: ['N'],
 				},
 				{
@@ -701,8 +699,7 @@ export const adobe_photoshop = {
 					keys: ['Ctrl'],
 				},
 				{
-					description:
-						'Temporarily switch to zoom out tool and change the image open button to open copy',
+					description: 'Temporarily switch to zoom out tool and change the image open button to open copy',
 					keys: ['Alt'],
 				},
 				{
@@ -714,8 +711,7 @@ export const adobe_photoshop = {
 					keys: ['F'],
 				},
 				{
-					description:
-						'Temporarily activate the White Balance tool and change the open image button to open object',
+					description: 'Temporarily activate the White Balance tool and change the open image button to open object',
 					keys: ['Shift'],
 				},
 				{
@@ -863,13 +859,11 @@ export const adobe_photoshop = {
 			name: 'Edit paths',
 			shortcuts: [
 				{
-					description:
-						'Switch from path selection, pen, add anchor point, delete anchor point, or convert point tools to direct selection tool',
+					description: 'Switch from path selection, pen, add anchor point, delete anchor point, or convert point tools to direct selection tool',
 					keys: ['Ctrl'],
 				},
 				{
-					description:
-						'Switch from pen tool to freeform pen tool to convert point tool when pointer is over anchor or direction point',
+					description: 'Switch from pen tool to freeform pen tool to convert point tool when pointer is over anchor or direction point',
 					keys: ['Alt'],
 				},
 			],
@@ -1027,8 +1021,7 @@ export const adobe_photoshop = {
 					keys: ['Shift', 'Alt', 'Y'],
 				},
 				{
-					description:
-						'Set blending mode to Threshold for bitmap images, Normal for all other images',
+					description: 'Set blending mode to Threshold for bitmap images, Normal for all other images',
 					keys: ['Shift', 'Alt', 'N'],
 				},
 			],
@@ -1073,8 +1066,7 @@ export const adobe_photoshop = {
 					keys: ['Ctrl', 'Shift', 'Alt', 'T'],
 				},
 				{
-					description:
-						'Decrease or increase type size of selected text 2 points or pixels',
+					description: 'Decrease or increase type size of selected text 2 points or pixels',
 					keys: ['Ctrl', 'Shift', '</>'],
 				},
 				{
