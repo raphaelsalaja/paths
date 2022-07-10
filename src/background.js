@@ -6,8 +6,7 @@ sources = data
 
 chrome.runtime.onInstalled.addListener(function () {
 	console.clear()
-
-	chrome.tabs.create({url: 'https://rafunderscore.vercel.app/paths/'})
+	//chrome.tabs.create({url: 'https://rafunderscore.vercel.app/paths/'})
 })
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 	switch (message.request) {
@@ -28,6 +27,17 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 	reorderData()
 	if (changeInfo.status === 'complete') {
 		setQuote()
+	}
+})
+chrome.commands.onCommand.addListener((command) => {
+	if (command == 'open-paths') {
+		chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
+			var url = tabs[0].url
+			if (url.includes('chrome://') && url.includes('chrome.google.com')) {
+			} else {
+				chrome.tabs.sendMessage(tabs[0].id, {message: 'open-paths'}, function (response) {})
+			}
+		})
 	}
 })
 

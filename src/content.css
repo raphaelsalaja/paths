@@ -2,79 +2,17 @@
 	:root {
 		--color-background: var(--color-light-background);
 		--color-border: var(--color-light-border);
-		--color-hover: var(--color-light-hover);
-		--color-tab: var(--color-light-tab);
-		--color-tab-text: var(--color-light-tab-text);
-		--color-action: var(--color-light-action);
-		--color-action-text: var(--color-light-action-text);
-		--color-bookmark: var(--color-light-bookmark);
-		--color-bookmark-text: var(--color-light-bookmark-text);
-		--color-support: var(--color-light-support);
-		--color-support-text: var(--color-light-support-text);
-		--color-quicklink: var(--color-light-quicklink);
-		--color-quicklink-text: var(--color-light-quicklink-text);
-		--color-tool: var(--color-light-tool);
-		--color-tool-text: var(--color-light-tool-text);
-		--color-key: var(--color-light-key);
-		--color-key-text: var(--color-light-key-text);
-		--color-text: var(--color-light-text);
-		--color-text-hover: var(--color-light-text-hover);
-		--color-search-placeholder: var(--color-light-search-placeholder);
-		--color-placeholder: var(--color-light-placeholder);
 	}
 }
 @media (prefers-color-scheme: dark) {
 	:root {
 		--color-background: var(--color-dark-background);
 		--color-border: var(--color-dark-border);
-		--color-hover: var(--color-dark-hover);
-		--color-tab: var(--color-dark-tab);
-		--color-tab-text: var(--color-dark-tab-text);
-		--color-action: var(--color-dark-action);
-		--color-action-text: var(--color-dark-action-text);
-		--color-bookmark: var(--color-dark-bookmark);
-		--color-bookmark-text: var(--color-dark-bookmark-text);
-		--color-support: var(--color-dark-support);
-		--color-support-text: var(--color-dark-support-text);
-		--color-quicklink: var(--color-dark-quicklink);
-		--color-quicklink-text: var(--color-dark-quicklink-text);
-		--color-tool: var(--color-dark-tool);
-		--color-tool-text: var(--color-dark-tool-text);
-		--color-key: var(--color-dark-key);
-		--color-key-text: var(--color-dark-key-text);
-		--color-text: var(--color-dark-text);
-		--color-text-hover: var(--color-dark-text-hover);
-		--color-search-placeholder: var(--color-dark-search-placeholder);
-		--color-placeholder: var(--color-dark-placeholder);
 	}
 }
 :root {
 	--overlay-color: rgba(0, 0, 0, 0.75);
 	--transparent: rgba(0, 0, 0, 0);
-	--z-index-front: 2147483647;
-	--z-index-middle: 1073741823;
-	--z-index-back: -2147483648;
-	--color-dark-background: #191919;
-	--color-dark-border: #2b2b2b;
-	--color-dark-hover: #292929;
-	--color-dark-tab: #001c0d;
-	--color-dark-tab-text: #1e9850;
-	--color-dark-action: #72000c;
-	--color-dark-action-text: #ee1e34;
-	--color-dark-bookmark: #004865;
-	--color-dark-bookmark-text: #11b3f3;
-	--color-dark-support: #480065;
-	--color-dark-support-text: #9c11f3;
-	--color-dark-quicklink: #5b6500;
-	--color-dark-quicklink-text: #d9f311;
-	--color-dark-tool: #646464;
-	--color-dark-tool-text: #efefef;
-	--color-dark-key: #4b4b4b;
-	--color-dark-key-text: #e2e2e2;
-	--color-dark-text: #cdcdcd;
-	--color-dark-text-hover: #ffffff;
-	--color-dark-search-placeholder: #5f5f5f;
-	--color-dark-placeholder: #292929;
 }
 
 @font-face {

@@ -14,6 +14,12 @@
 		"default_title": "Open Paths"
 	},
 	"icons": {},
+	"commands": {
+		"open-paths": {
+			"suggested_key": "Ctrl+Shift+Y",
+			"description": "The command to open the Paths extension"
+		}
+	},
 	"content_scripts": [
 		{
 			"matches": ["<all_urls>"],
