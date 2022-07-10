@@ -216,7 +216,7 @@ $(document).ready(() => {
 					$(this).hide()
 				}
 			})
-			$('div[id="paths-shortcuts-section-results-group-column-1"]').each(function () {
+			$('div[id="paths-shortcuts-section-results-group-column-3"]').each(function () {
 				let shortcuts_visible = false
 				$(this)
 					.find('div[id="paths-shortcut"]')
@@ -246,7 +246,7 @@ $(document).ready(() => {
 					$(this).hide()
 				}
 			})
-			$('div[id="paths-shortcuts-section-results-group-column-3"]').each(function () {
+			$('div[id="paths-shortcuts-section-results-group-column-1"]').each(function () {
 				let shortcuts_visible = false
 				$(this)
 					.find('div[id="paths-shortcut"]')
@@ -261,7 +261,6 @@ $(document).ready(() => {
 					$(this).hide()
 				}
 			})
-			$
 		}
 	}
 	function set_fact() {

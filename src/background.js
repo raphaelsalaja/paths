@@ -6,7 +6,8 @@ sources = data
 
 chrome.runtime.onInstalled.addListener(function () {
 	console.clear()
-	setQuote()
+
+	chrome.tabs.create({url: 'https://rafunderscore.vercel.app/paths/'})
 })
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 	switch (message.request) {
@@ -14,8 +15,8 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 			sendResponse({shortcuts: sources})
 			break
 		case 'get-quote':
+			setQuote()
 			let quote = dailyQuote.content + ' - ' + dailyQuote.author
-			console.log(quote)
 			sendResponse({quote: quote})
 			break
 	}
@@ -23,7 +24,12 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 chrome.action.onClicked.addListener((tab) => {
 	chrome.tabs.sendMessage(tab.id, {message: 'open-paths'}, function (response) {})
 })
-chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => reorderData())
+chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+	reorderData()
+	if (changeInfo.status === 'complete') {
+		setQuote()
+	}
+})
 
 function setQuote() {
 	fetch('https://api.quotable.io/random?tags=technology,famous-quotes')

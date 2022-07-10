@@ -29,5 +29,5 @@
 		}
 	],
 	"permissions": ["tabs", "activeTab", "scripting", "alarms"],
-	"host_permissions": ["https://api.quotable.io/random"]
+	"host_permissions": ["https://api.quotable.io/random", "*://*/*"]
 }
