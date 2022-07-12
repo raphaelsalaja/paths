@@ -10,10 +10,18 @@
 		"type": "module"
 	},
 	"action": {
-		"icons": {},
+		"icons": {
+			"16": "assets/icon16.png",
+			"48": "assets/icon32.png",
+			"128": "assets/icon128.png"
+		},
 		"default_title": "Open Paths"
 	},
-	"icons": {},
+	"icons": {
+		"16": "assets/icon16.png",
+		"48": "assets/icon32.png",
+		"128": "assets/icon128.png"
+	},
 	"commands": {
 		"open-paths": {
 			"suggested_key": "Ctrl+Shift+Y",
@@ -34,6 +42,6 @@
 			"matches": ["<all_urls>"]
 		}
 	],
-	"permissions": ["tabs", "activeTab", "scripting", "alarms"],
-	"host_permissions": ["https://api.quotable.io/random", "*://*/*"]
+
+	"permissions": ["tabs", "activeTab", "scripting"]
 }
