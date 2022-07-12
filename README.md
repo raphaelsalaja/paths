@@ -1,10 +1,9 @@
-<p align="center">
-    <img width="1012" alt="Twitter" src="https://user-images.githubusercontent.com/52125687/177175352-e906777b-4af9-498e-8e45-76ad5875dfd2.png"></br>
-</p>
+ 
+![Product Hunt _ Screenshot _ asdfasdfdsaf](https://user-images.githubusercontent.com/52125687/178572560-088dd244-f242-4536-8d4b-3f3294e35674.png)
 
 ## Why would you use this? 🔎
 
-Learning shortcuts and quick commands can almost double your productivity. This makes completing tasks faster and easier. Paths shows you the all the available shortcuts and commands for any of the most popular pages
+Learning shortcuts and quick commands can almost double your productivity. Paths shows you the all the available shortcuts and commands for the most popular websites and apps that you use on a daily basis.
 
 👉 [Github Link](https://github.com/raf-underscore/paths)
 
