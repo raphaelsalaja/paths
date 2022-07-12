@@ -1,6 +1,5 @@
-<p align="center">
-    <img width="1012" alt="Twitter" src="https://user-images.githubusercontent.com/52125687/177175352-e906777b-4af9-498e-8e45-76ad5875dfd2.png"></br>
-</p>
+ 
+![Product Hunt _ Screenshot _ asdfasdfdsaf](https://user-images.githubusercontent.com/52125687/178572560-088dd244-f242-4536-8d4b-3f3294e35674.png)
 
 ## Why would you use this? 🔎
 
