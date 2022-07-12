@@ -4,7 +4,7 @@
 
 ## Why would you use this? 🔎
 
-Learning shortcuts and quick commands can almost double your productivity. This makes completing tasks faster and easier. Paths shows you the all the available shortcuts and commands for any of the most popular pages
+Learning shortcuts and quick commands can almost double your productivity. Paths shows you the all the available shortcuts and commands for the most popular websites and apps that you use on a daily basis.
 
 👉 [Github Link](https://github.com/raf-underscore/paths)
 
