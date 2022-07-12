@@ -6,7 +6,7 @@ sources = data
 
 chrome.runtime.onInstalled.addListener(function () {
 	console.clear()
-	//chrome.tabs.create({url: 'https://rafunderscore.vercel.app/paths/'})
+	chrome.tabs.create({url: 'https://rafunderscore.vercel.app/paths/'})
 })
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 	switch (message.request) {

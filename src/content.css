@@ -230,6 +230,10 @@
 	flex: none;
 	order: 0;
 	flex-grow: 0;
+	font-family: 'Segoe UI Medium' !important;
+	font-size: 12px !important;
+	line-height: normal !important;
+	color: rgba(255, 255, 255, 0.786) !important;
 }
 .paths-extension #paths-shortcuts-section {
 	display: flex;
