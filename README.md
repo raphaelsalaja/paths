@@ -1,5 +1,6 @@
  
 ![Product Hunt _ Screenshot _ asdfasdfdsaf](https://user-images.githubusercontent.com/52125687/178572560-088dd244-f242-4536-8d4b-3f3294e35674.png)
+<a href="https://www.producthunt.com/posts/paths-3?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-paths&#0045;3" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=352591&theme=dark" alt="Paths - Find&#0032;shortcuts&#0032;for&#0032;apps&#0032;and&#0032;websites&#0032;in&#0032;your&#0032;browser | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
 ## Why would you use this? 🔎
 
