@@ -82,8 +82,6 @@ export const data = [
 Opening Paths can be done by pressing <kbd>⌘ Command</kbd>+<kbd>Shift</kbd>+<kbd>Y</kbd> on Mac or <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Y</kbd> on Windows. You can change the shortcut by going to chrome://extensions/shortcuts in Chrome. Also, if you cannnot use the command for some reason, you can also open it by pressing the app button on the top bar.
 
 Closing the app can be done by either clicking on the background, pressing <kbd>Esc</kbd> or by pressing the icon on the topbar.
-
-<kbd>/</kbd> followed by a website name will show all the shortcuts relevant to it.
  
 ## Support 💌
 
