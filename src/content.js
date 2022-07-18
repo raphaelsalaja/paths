@@ -166,12 +166,11 @@ $(document).ready(() => {
 			$('div[id="paths-shortcuts-section-results-group-column-3"]').each(function () {
 				$(this).show()
 			})
-		} else if (search_box_value.startsWith('/')) {
-			let search_box_value_without_slash = search_box_value.substring(1)
+		} else if (search_box_value.length > 0) {
+			let search_box_value = $('#paths-search-box').val().toLowerCase()
 			$('div[id="paths-shortcuts-section-title-text"]').each(function () {
 				let text = $(this).text().toLowerCase()
-
-				if (text.includes(search_box_value_without_slash)) {
+				if (text.includes(search_box_value)) {
 					$(this).parent().parent().parent().show()
 				} else {
 					$(this).parent().parent().parent().hide()

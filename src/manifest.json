@@ -43,5 +43,5 @@
 		}
 	],
 
-	"permissions": ["tabs", "activeTab", "scripting"]
+	"permissions": ["tabs"]
 }

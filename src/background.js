@@ -11,6 +11,7 @@ chrome.runtime.onInstalled.addListener(function () {
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 	switch (message.request) {
 		case 'get-shortcuts':
+			reorderData()
 			sendResponse({shortcuts: sources})
 			break
 		case 'get-quote':
@@ -42,7 +43,7 @@ chrome.commands.onCommand.addListener((command) => {
 })
 
 function setQuote() {
-	fetch('https://api.quotable.io/random?tags=technology,famous-quotes')
+	fetch('https://api.quotable.io/random?tags=technology')
 		.then((response) => response.json())
 		.then((quote) => {
 			dailyQuote = quote
@@ -58,12 +59,13 @@ const getCurrentTab = async () => {
 }
 function reorderData() {
 	getCurrentTab().then((response) => {
-		let page = response[0].url.split('www.')[1].split('.')[0]
 		for (let i = 0; i < sources.length; i++) {
-			if (sources[i].title.toLowerCase().includes(page.toLowerCase())) {
-				let temp = sources[0]
-				sources[0] = sources[i]
-				sources[i] = temp
+			let source = sources[i]
+			let title = source.title
+			let index = response[0].title.indexOf(title)
+			if (index > -1) {
+				sources.splice(i, 1)
+				sources.unshift(source)
 			}
 		}
 	})
